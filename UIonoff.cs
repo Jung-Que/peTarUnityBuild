@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class UIonoff : MonoBehaviour
+{
+    public GameObject[] UI_;
+    bool isActive = true;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void isClicked()
+    {
+        if(isActive == false)
+        {
+            for(int i=0; i<UI_.Length; i++)
+            {
+                UI_[i].SetActive(true);
+            }
+            isActive = true;
+        }
+        else
+        {
+            for(int i=0; i<UI_.Length; i++)
+            {
+                UI_[i].SetActive(false);
+            }
+            isActive = false;
+        }
+    }
+}
